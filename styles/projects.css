@@ -1,0 +1,58 @@
+.project {
+  padding-top: 4px;
+  padding-inline: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 5px var(--rose-pine--love-moon);
+  transition: all 200ms ease;
+}
+
+.project:hover {
+  box-shadow: 0 0 10px var(--rose-pine--love-moon);
+}
+
+.project p {
+  font-size: 14px;
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language--sign {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 1px solid;
+}
+
+.go {
+  border-color: oklch(74.6% 0.16 232.661);
+}
+
+.redis {
+  border-color: oklch(63.7% 0.237 25.331);
+}
+
+.python {
+  border-top-color: oklch(42.4% 0.199 265.638);
+  border-left-color: oklch(42.4% 0.199 265.638);
+  border-bottom-color: oklch(85.2% 0.199 91.936);
+  border-right-color: oklch(85.2% 0.199 91.936);
+}
+
+.jupyter-notebook {
+  border-color: oklch(40.8% 0.123 38.172);
+}
+
+.language span {
+  color: var(--rose-pine--iris-moon);
+}

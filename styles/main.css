@@ -1,0 +1,113 @@
+@import url('./fonts.css');
+
+:root {
+  --font-pacifico: "Pacifico", cursive;
+  --font-ubuntu-mono: "Ubuntu Mono", monospace;
+  --font-space-mono: "Space Mono", monospace;
+
+  --rose-pine--base-main: #191724;
+  --rose-pine--base-moon: #232136;
+  --rose-pine--base-dawn: #faf4ed;
+
+  --rose-pine--overlay-moon: #393552;
+
+  --rose-pine--muted-moon: #6e6a86;
+
+  --rose-pine--subtle-moon: #908caa;
+
+  --rose-pine--text-main: #e0def4;
+  --rose-pine--text-moon: #e0def4;
+  --rose-pine--text-dawn: #575279;
+
+  --rose-pine--love-main: #eb6f92;
+  --rose-pine--love-moon: #eb6f92;
+  --rose-pine--love-dawn: #b4637a;
+
+  --rose-pine--pine-moon: #3e8fb0;
+
+  --rose-pine--gold-main: #f6c177;
+  --rose-pine--gold-moon: #f6c177;
+  --rose-pine--gold-dawn: #ea9d34;
+
+  --rose-pine--iris-moon: #c4a7e7;
+  --rose-pine--iris-dawn: #907aa9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: var(--rose-pine--text-dawn);
+  background: var(--rose-pine--pine-moon);
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--rose-pine--base-main);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--rose-pine--love-moon);
+  font-family: var(--font-ubuntu-mono);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--rose-pine--gold-moon);
+  font-family: var(--font-pacifico);
+}
+
+hr {
+  width: 920px;
+  margin-inline: auto;
+  color: var(--rose-pine--iris-moon);
+  box-shadow: 0 0 10px 3px var(--rose-pine--iris-dawn);
+}
+
+p {
+  color: var(--rose-pine--gold-dawn);
+  font-family: var(--font-space-mono);
+}
+
+nav,
+main,
+footer {
+  width: 920px;
+  margin-inline: auto;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+nav ul li svg {
+  color: var(--rose-pine--love-main);
+}
+
+.active {
+  fill: var(--rose-pine--love-main);
+  transform: rotate(-90deg);
+}
+
+.footer-divider {
+  margin-top: auto;
+}
+
+footer h4 {
+  text-align: center;
+}
