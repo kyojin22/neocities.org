@@ -11,6 +11,7 @@ async function fetchInfo() {
 
 async function loadViews() {
   const info = await fetchInfo();
+  if (!info) return;
 
   // views
   const viewsSpan = document.getElementById('views');
