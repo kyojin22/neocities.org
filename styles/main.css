@@ -29,6 +29,10 @@
   --rose-pine--gold-moon: #f6c177;
   --rose-pine--gold-dawn: #ea9d34;
 
+  --rose-pine--foam-main: #9ccfd8;
+  --rose-pine--foam-moon: #9ccfd8;
+  --rose-pine--foam-dawn: #56949f;
+
   --rose-pine--iris-moon: #c4a7e7;
   --rose-pine--iris-dawn: #907aa9;
 }
@@ -49,15 +53,52 @@ body {
   flex-direction: column;
 
   background: var(--rose-pine--base-main);
+
+  position: relative;
 }
 
 li {
   list-style: none;
 }
 
+nav ul {
+  padding: 0 40px;
+}
+
+nav ul li {
+  padding: 0 4px;
+}
+
+nav ul li:hover {
+  background: linear-gradient(
+    to right, 
+    var(--rose-pine--love-dawn),
+    var(--rose-pine--love-moon),
+    var(--rose-pine--gold-moon)
+  );
+}
+
+nav ul li:hover a,
+nav ul li:hover svg {
+  color: var(--rose-pine--base-main);
+}
+
+nav ul li:hover .active {
+  fill: var(--rose-pine--base-main);
+}
+
+nav ul li a {
+  padding: 4px;
+}
+
+nav ul li svg {
+  color: var(--rose-pine--love-main);
+}
+
 a {
   color: var(--rose-pine--love-moon);
   font-family: var(--font-ubuntu-mono);
+  text-underline-offset: 4px;
 }
 
 h1,
@@ -71,8 +112,6 @@ h6 {
 }
 
 hr {
-  width: 920px;
-  margin-inline: auto;
   color: var(--rose-pine--iris-moon);
   box-shadow: 0 0 10px 3px var(--rose-pine--iris-dawn);
 }
@@ -84,7 +123,8 @@ p {
 
 nav,
 main,
-footer {
+footer,
+hr {
   width: 920px;
   margin-inline: auto;
 }
@@ -93,10 +133,6 @@ nav ul li {
   display: flex;
   align-items: center;
   gap: 6px;
-}
-
-nav ul li svg {
-  color: var(--rose-pine--love-main);
 }
 
 .active {
@@ -110,4 +146,76 @@ nav ul li svg {
 
 footer h4 {
   text-align: center;
+}
+
+.page-stats {
+  padding: 4px 12px;
+  
+  border-radius: 6px;
+  background: var(--rose-pine--foam-moon);
+  box-shadow: 0 0 15px 5px var(--rose-pine--foam-dawn);
+  
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  
+  transition: all 200ms ease;
+}
+
+.page-stats:hover {
+  background: var(--rose-pine--foam-dawn);
+}
+
+.page-stats p {
+  color: var(--rose-pine--base-main);
+  font-size: 13px;
+}
+
+.page-stats p span,
+.page-last-updated p span {
+  font-weight: 700;
+}
+
+.page-last-updated {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.page-last-updated p {
+  color: var(--rose-pine--foam-main);
+  font-size: 12px;
+}
+
+.page-stats p,
+.page-last-updated p {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 920px) {
+  nav ul {
+    padding: 0 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+  
+  nav,
+  main,
+  footer,
+  hr {
+    padding: 0 12px;
+    width: 100%;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .page-last-updated {
+    display: none;
+  }
 }
