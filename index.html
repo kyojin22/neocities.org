@@ -20,6 +20,89 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./styles/main.css">
+
+  <style>
+    #aura-wrapper,
+    .aura-wrapper {
+      position: fixed;
+      bottom: 0;
+      left: 5%;
+      height: 220px;
+      pointer-events: none;
+    }
+
+    #purple-girl {
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 0 25px var(--rose-pine--iris-moon));
+    }
+
+    .aura-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: -25%;
+      background:
+        radial-gradient(
+          circle at 50% 70%,
+          rgba(155, 121, 255, 0.9),
+          rgba(155, 121, 255, 0.4) 35%,
+          transparent 70%
+        );
+      filter: blur(25px);
+      opacity: 0.9;
+      animation: cursed-pulse 3s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .aura-wrapper::after {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(190, 160, 255, 0.8),
+          transparent 65%
+        );
+      filter: blur(40px);
+      mix-blend-mode: screen;
+      animation: cursed-flicker 1200ms infinite alternate;
+      z-index: 1;
+    }
+
+    @keyframes cursed-pulse {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.95);
+        opacity: 0.75;
+      }
+    }
+
+    @keyframes cursed-flicker {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-8px) scale(1.1);
+        opacity: 0.9;
+      }
+    }
+
+    @media screen and (max-width: 1080px) {
+      #purple-girl {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- if u read my rants thanks <3 -->
@@ -150,6 +233,14 @@
   <div class="page-last-updated">
     <p>created at: <span id="created-at">-</span></p>
     <p>updated at: <span id="last-updated-at">-</span></p>
+  </div>
+
+  <div class="aura-wrapper">
+    <img
+      id="purple-girl"
+      src="./public/purple-girl.webp"
+      alt="some purple anime girl"
+    />
   </div>
 
   <footer>

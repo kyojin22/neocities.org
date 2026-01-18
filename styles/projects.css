@@ -1,9 +1,11 @@
 .project {
   padding-top: 4px;
   padding-inline: 8px;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   margin-bottom: 16px;
-  box-shadow: 0 0 5px var(--rose-pine--love-moon);
+  border: 2px solid var(--rose-pine--muted-moon);
+  border-radius: 8px;
+  border-left: 4px solid var(--rose-pine--love-moon);
   transition: all 200ms ease;
 }
 
@@ -27,15 +29,21 @@
   gap: 8px;
 }
 
+.language span {
+  font-family: var(--font-ubuntu-mono);
+  font-weight: 700;
+}
+
 .language--sign {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
-  border: 1px solid;
+  border: 2px solid;
 }
 
 .go {
   border-color: oklch(74.6% 0.16 232.661);
+  /* box-shadow: 0 0 10px 1px oklch(74.6% 0.16 232.661); */
 }
 
 .redis {

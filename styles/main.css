@@ -155,9 +155,9 @@ footer h4 {
   background: var(--rose-pine--foam-moon);
   box-shadow: 0 0 15px 5px var(--rose-pine--foam-dawn);
   
-  position: absolute;
-  right: 5px;
-  top: 5px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
   
   transition: all 200ms ease;
 }
@@ -177,9 +177,9 @@ footer h4 {
 }
 
 .page-last-updated {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
 }
 
 .page-last-updated p {
