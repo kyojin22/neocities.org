@@ -1,0 +1,72 @@
+.blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blog {
+  padding: 8px;
+  border: 1px solid var(--rose-pine--subtle-moon);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.blog--title {
+  display: inline;
+  border-bottom: 1px solid var(--rose-pine--love-moon);
+}
+
+.blog--title h3 {
+  font-family: var(--font-ubuntu-mono);
+}
+
+.blog--info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog--tags {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blog--tag {
+  padding: 4px 8px;
+  border: 1px solid var(--rose-pine--pine-moon);
+  border-radius: 16px;
+  transition: all 100ms ease;
+}
+
+.blog--tag:hover {
+  background: var(--rose-pine--pine-moon);
+}
+
+.blog--tag span {
+  color: var(--rose-pine--text-main);
+  font-family: var(--font-ubuntu-mono);
+  font-size: 13px;
+}
+
+.blog--date span {
+  color: var(--rose-pine--text-main);
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.go-back-btn {
+  border-bottom: 1px solid var(--rose-pine--love-moon);
+}
+
+.content {
+  margin-top: 32px;
+}
