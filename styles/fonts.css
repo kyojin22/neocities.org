@@ -51,3 +51,8 @@
   font-weight: 700;
   font-style: italic;
 }
+
+.font-kalam {
+  font-family: "Kalam", cursive;
+  font-style: normal;
+}

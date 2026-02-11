@@ -19,90 +19,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles/main.css">
-
-  <style>
-    #aura-wrapper,
-    .aura-wrapper {
-      position: fixed;
-      bottom: 0;
-      left: 5%;
-      height: 220px;
-      pointer-events: none;
-    }
-
-    #purple-girl {
-      height: 100%;
-      position: relative;
-      z-index: 2;
-      filter: drop-shadow(0 0 25px var(--rose-pine--iris-moon));
-    }
-
-    .aura-wrapper::before {
-      content: "";
-      position: absolute;
-      inset: -25%;
-      background:
-        radial-gradient(
-          circle at 50% 70%,
-          rgba(155, 121, 255, 0.9),
-          rgba(155, 121, 255, 0.4) 35%,
-          transparent 70%
-        );
-      filter: blur(25px);
-      opacity: 0.9;
-      animation: cursed-pulse 3s ease-in-out infinite;
-      z-index: 0;
-    }
-
-    .aura-wrapper::after {
-      content: "";
-      position: absolute;
-      inset: -30%;
-      background:
-        radial-gradient(
-          circle,
-          rgba(190, 160, 255, 0.8),
-          transparent 65%
-        );
-      filter: blur(40px);
-      mix-blend-mode: screen;
-      animation: cursed-flicker 1200ms infinite alternate;
-      z-index: 1;
-    }
-
-    @keyframes cursed-pulse {
-      0% {
-        transform: scale(0.95);
-        opacity: 0.7;
-      }
-      50% {
-        transform: scale(1.05);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(0.95);
-        opacity: 0.75;
-      }
-    }
-
-    @keyframes cursed-flicker {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.6;
-      }
-      100% {
-        transform: translateY(-8px) scale(1.1);
-        opacity: 0.9;
-      }
-    }
-
-    @media screen and (max-width: 1080px) {
-      #purple-girl {
-        display: none;
-      }
-    }
-  </style>
 </head>
 <body>
   <!-- if u read my rants thanks <3 -->
@@ -209,7 +130,7 @@
   <hr>
 
   <main>
-    <h1>this is my neocities.org website built in 1 day</h1>
+    <h1>this is my neocities.org website</h1>
 
     <p>why? coz of my perfectionism, i was procrastinating it and waiting right time to do it and that right time was not coming. so i decided to start and finish it in 1 day today [11.01.2026]. why to create some website in neocities.org coz i was inspired from seein others cool ideas and indiewebs. [very stupid reason right? xD]</p>
   
@@ -235,16 +156,12 @@
     <p>updated at: <span id="last-updated-at">-</span></p>
   </div>
 
-  <!-- <div class="aura-wrapper">
-    <img
-      id="purple-girl"
-      src="./public/purple-girl.webp"
-      alt="some purple anime girl"
-    />
-  </div> -->
+  <div class="hateful">
+    <p>r u laughing reading this cringe? then, im glad that i made u smile!! :D</p>
+  </div>
 
   <footer>
-    <h4>built with desire to finish by me</h4>
+    <h4>built with desire by me</h4>
   </footer>
 
   <script src="./scripts/info.js"></script>

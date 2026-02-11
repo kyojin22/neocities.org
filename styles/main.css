@@ -4,6 +4,7 @@
   --font-pacifico: "Pacifico", cursive;
   --font-ubuntu-mono: "Ubuntu Mono", monospace;
   --font-space-mono: "Space Mono", monospace;
+  --font-kalam: "Kalam", cursive;
 
   --rose-pine--base-main: #191724;
   --rose-pine--base-moon: #232136;
@@ -218,4 +219,23 @@ footer h4 {
   .page-last-updated {
     display: none;
   }
+}
+
+.hateful {
+  position: absolute;
+  padding: 0 20px;
+
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  margin-left: 50px;
+
+  background: #000;
+  border: 1px solid red;
+  box-shadow: 0 0 15px 5px red;
+}
+
+.hateful p {
+  color: red;
+  font-size: 18px;
+  font-family: var(--font-kalam);
 }
