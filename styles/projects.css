@@ -1,16 +1,20 @@
 .project {
   padding-top: 4px;
-  padding-inline: 8px;
+  padding-inline: 16px;
   padding-bottom: 12px;
   margin-bottom: 16px;
-  border: 2px solid var(--rose-pine--muted-moon);
+  border: 2px solid var(--rose-pine--love-moon);
   border-radius: 8px;
-  border-left: 4px solid var(--rose-pine--love-moon);
+  border-left: 16px solid var(--rose-pine--love-moon);
   transition: all 200ms ease;
 }
 
 .project:hover {
   box-shadow: 0 0 10px var(--rose-pine--love-moon);
+}
+
+.project h4 {
+  font-family: var(--font-kalam);
 }
 
 .project p {
@@ -59,6 +63,38 @@
 
 .jupyter-notebook {
   border-color: oklch(40.8% 0.123 38.172);
+}
+
+.javascript {
+  border-color: oklch(90.5% 0.182 98.111);
+}
+
+.css {
+  border-color: oklch(55.8% 0.288 302.321);
+}
+
+.html {
+  border-color: oklch(57.7% 0.245 27.325);
+}
+
+.vue {
+  border-color: oklch(76.5% 0.177 163.223);
+}
+
+.react {
+  border-color: oklch(48.8% 0.243 264.376);
+}
+
+.typescript {
+  border-color: oklch(62.3% 0.214 259.815);
+}
+
+.angular {
+  border-color: oklch(51.8% 0.253 323.949);
+}
+
+.csharp {
+  border-color: oklch(79.2% 0.209 151.711);
 }
 
 .language span {
