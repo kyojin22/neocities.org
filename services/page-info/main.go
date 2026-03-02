@@ -10,16 +10,12 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
-	"time"
 )
 
 const (
 	apiURL     = "https://neocities.org/api/info?sitename="
 	sitename   = "duche"
 	outputFile = "output.json"
-
-	username = "duche"
-	password = "kyo-Neocities-orG-142536986"
 )
 
 type Info struct {
@@ -105,7 +101,7 @@ func uploadFile(path string) error {
 		return err
 	}
 
-	auth := base64.StdEncoding.EncodeToString([]byte(username + ":" + password))
+	auth := base64.StdEncoding.EncodeToString([]byte(os.Getenv("NEOCITIES_USER") + ":" + os.Getenv("NEOCITIES_PASS")))
 
 	req.Header.Set("Authorization", "Basic "+auth)
 	req.Header.Set("Content-Type", writer.FormDataContentType())
@@ -128,17 +124,7 @@ func uploadFile(path string) error {
 
 func main() {
 	if err := fetchStats(); err != nil {
-		fmt.Println("Error:", err)
-	}
-
-	ticker := time.NewTicker(time.Hour)
-	defer ticker.Stop()
-
-	for range ticker.C {
-		if err := fetchStats(); err != nil {
-			fmt.Println("Error:", err)
-		} else {
-			fmt.Println("Updated & uploaded output.json at", time.Now().Format(time.RFC3339))
-		}
+		fmt.Fprintln(os.Stderr, "Error:", err)
+		os.Exit(1)
 	}
 }
