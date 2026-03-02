@@ -10,7 +10,7 @@ async function loadViews() {
 
   // views
   const viewsSpan = document.getElementById("views");
-  viewsSpan.textContent = info.views || "-";
+  viewsSpan.textContent = String(info.views || 0).padStart(7, '0');
 
   // updated at
   const last_updated_yyyy_mm_dd = info.last_updated
