@@ -60,7 +60,7 @@ const projects = [
 ];
 
 function renderProjects() {
-  const main = document.querySelector('main');
+  const main = document.querySelector('.main-content');
 
   projects.forEach(project => {
     const div = document.createElement('div');

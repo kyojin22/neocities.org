@@ -19,6 +19,7 @@
 
 .project p {
   font-size: 14px;
+  font-family: var(--font-space-mono);
 }
 
 .languages {
